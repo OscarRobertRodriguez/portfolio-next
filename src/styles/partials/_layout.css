@@ -1,0 +1,76 @@
+
+:root {
+  --fontSize: 2rem;
+}
+
+:root {
+  --centered: {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.centered {
+  @apply --centered;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+li,ol {
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  
+}
+
+header {
+  flex: 1;
+  background: gray(130);
+  min-height: 120px;
+  font-size: var(--fontSize);
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background: gray(120);
+}
+
+.about,
+.projects,
+.contact,
+.graphs {
+  flex: 1 1 90vh;
+}
+
+.about,
+.graphs {
+  background: gray(80);
+}
+
+.projects,
+.contact {
+  background: gray(100);
+} 
+

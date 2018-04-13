@@ -5,6 +5,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const postcssImport = require('postcss-import');
+const mediaPostCSS = require('css-mqpacker');
 
 exports.devServer = ({ host, port } = {}) => ({
   devServer: {
@@ -54,7 +56,7 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [postcssNext()],
+              plugins: () => [postcssImport(), postcssNext()],
             },
           },
         ],
@@ -67,10 +69,10 @@ exports.purifyCSS = ({ paths }) => ({
   plugins: [new PurifyCSSPlugin({ paths })],
 });
 
-exports.cssnext = () => ({
+exports.postCSSPlugins = () => ({
   loader: 'postcss-loader',
   options: {
-    plugins: () => [postcssNext()],
+    plugins: () => [postcssImport(), postcssNext(), mediaPostCSS()],
   },
 });
 

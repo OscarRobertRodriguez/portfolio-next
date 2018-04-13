@@ -34,7 +34,7 @@ const productionConfig = merge([
     recordsPath: path.join(__dirname, 'records.json'),
   },
   parts.clean(PATHS.build),
-  parts.extractCSS({ use: ['css-loader', parts.cssnext()] }),
+  parts.extractCSS({ use: ['css-loader', parts.postCSSPlugins()] }),
   parts.purifyCSS({
     paths: glob.sync([`${PATHS.src}/**/*.html`, `${PATHS.src}/**/*.js`], {
       nodir: true,
