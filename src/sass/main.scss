@@ -1,0 +1,30 @@
+
+
+:root {
+  --color-red: red;
+}
+
+
+
+body {
+  background-color: var(--color-red);
+  font-size: 2rem;
+}
+
+
+p {
+  background-color: var(--color-red);
+  font-size: 2rem;
+}
+
+.img-container {
+  width: 5rem;
+  height: 5rem;
+  border: 3px solid #fff;
+
+  & > * {
+    width: 100%;
+    height: 100%;
+  }
+}
+
