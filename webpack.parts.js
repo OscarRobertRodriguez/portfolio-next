@@ -27,7 +27,7 @@ exports.extractCSS = ({ include, exclude, use }) => {
     module: {
       rules: [
         {
-          test: /\.css/,
+          test: /\.scss/,
           include,
           exclude,
 
@@ -42,21 +42,44 @@ exports.extractCSS = ({ include, exclude, use }) => {
   };
 };
 
-exports.loadCSS = ({ include, exclude } = {}) => ({
+exports.loadHTML = ({ include, exclude } = {}) => ({
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.html$/,
+        include,
+        exclude,
+
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              minimize: true,
+              attrs: ['img:src'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+});
+
+exports.loadSCSS = ({ include, exclude } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
         include,
         exclude,
 
         use: [
           'style-loader',
           'css-loader',
+          'sass-loader',
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [postcssImport(), postcssNext()],
+              plugins: () => [postcssNext()],
             },
           },
         ],
@@ -72,7 +95,7 @@ exports.purifyCSS = ({ paths }) => ({
 exports.postCSSPlugins = () => ({
   loader: 'postcss-loader',
   options: {
-    plugins: () => [postcssImport(), postcssNext(), mediaPostCSS()],
+    plugins: () => [postcssNext()],
   },
 });
 

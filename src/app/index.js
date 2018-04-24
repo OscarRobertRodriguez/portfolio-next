@@ -1,1 +1,3 @@
-import '../styles/main.css';
+import '../styles/main.scss';
+
+import './images';

@@ -1,5 +1,4 @@
 const SystemBellPlugin = require('system-bell-webpack-plugin');
-const WebpackNotifierPlugin = require('webpack-notifier');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const parts = require('./webpack.parts');
 const merge = require('webpack-merge');
@@ -14,13 +13,10 @@ const PATHS = {
 
 const commonConfig = merge([
   {
-    plugins: [
-      new SystemBellPlugin(),
-      new WebpackNotifierPlugin(),
-      new FriendlyErrorsWebpackPlugin(),
-    ],
+    plugins: [new SystemBellPlugin(), new FriendlyErrorsWebpackPlugin()],
   },
   parts.loadSVGS(),
+  parts.loadHTML(),
   parts.loadJavaScript({ include: PATHS.app }),
 ]);
 
@@ -34,7 +30,7 @@ const productionConfig = merge([
     recordsPath: path.join(__dirname, 'records.json'),
   },
   parts.clean(PATHS.build),
-  parts.extractCSS({ use: ['css-loader', parts.postCSSPlugins()] }),
+  parts.extractCSS({ use: ['css-loader', 'sass-loader', parts.postCSSPlugins()] }),
   parts.purifyCSS({
     paths: glob.sync([`${PATHS.src}/**/*.html`, `${PATHS.src}/**/*.js`], {
       nodir: true,
@@ -77,7 +73,7 @@ const productionConfig = merge([
 
 const developmentConfig = merge([
   parts.devServer,
-  parts.loadCSS(),
+  parts.loadSCSS(),
   parts.loadImages(),
   parts.loadFonts({
     options: {

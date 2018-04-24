@@ -19,7 +19,7 @@
         "byName": {},
         "bySource": {},
         "usedIds": [
-          1
+          0
         ]
       }
     }
@@ -40,7 +40,7 @@
         "byName": {},
         "bySource": {},
         "usedIds": [
-          1
+          0
         ]
       }
     }
@@ -75,13 +75,21 @@
       "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--6-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/purecss/build/pure-min.css": 1,
       "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--6-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/postcss-loader/lib/index.js??ref--6-3!src/styles/layout.css": 0,
       "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--6-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/postcss-loader/lib/index.js??ref--6-3!src/styles/variables.css": 3,
-      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--6-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/postcss-loader/lib/index.js??ref--6-3!node_modules/tachyons/css/tachyons.css": 1
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--6-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/postcss-loader/lib/index.js??ref--6-3!node_modules/tachyons/css/tachyons.css": 1,
+      "node_modules/url-loader/dist/cjs.js??ref--8!src/images/tick.png": 0,
+      "node_modules/url-loader/dist/cjs.js??ref--8!src/images/calc.png": 1,
+      "node_modules/url-loader/dist/cjs.js??ref--8!src/images/magnify.png": 3,
+      "node_modules/babel-loader/lib/index.js!src/app/images.js": 4,
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--6-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/postcss-loader/lib/index.js??ref--6-3!src/styles/main.scss": 5,
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--6-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/lib/index.js??ref--6-4!src/styles/main.scss": 5
     },
     "usedIds": {
       "0": 0,
       "1": 1,
       "2": 2,
-      "3": 3
+      "3": 3,
+      "4": 4,
+      "5": 5
     }
   },
   "chunks": {
@@ -195,7 +203,49 @@
         "byName": {},
         "bySource": {},
         "usedIds": [
-          1
+          0
+        ]
+      }
+    }
+  ],
+  "extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js!node_modules/postcss-loader/lib/index.js??ref--6-3!src/styles/main.scss": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/lib/css-base.js": 0,
+          "node_modules/css-loader/index.js!node_modules/postcss-loader/lib/index.js??ref--6-3!src/styles/main.scss": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/lib/index.js??ref--6-4!src/styles/main.scss": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/lib/css-base.js": 0,
+          "node_modules/css-loader/index.js!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/lib/index.js??ref--6-4!src/styles/main.scss": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": [
+          0
         ]
       }
     }
