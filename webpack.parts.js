@@ -55,7 +55,7 @@ exports.loadHTML = ({ include, exclude } = {}) => ({
             loader: 'html-loader',
             options: {
               minimize: true,
-              attrs: ['img:src'],
+              attrs: ['img:src', 'xlink: href'],
             },
           },
         ],
