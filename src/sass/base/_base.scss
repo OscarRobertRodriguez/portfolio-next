@@ -10,13 +10,23 @@
 
 html {
   font-size: 62.5%; // 1rem - 10px  10/16 = 62.5%;
+  min-height: 100%;
 }
 
 body {
    box-sizing: border-box;
+   min-height: 100%;
+   width: 100%;
+   margin: 0;
 }
 
 // use this to change color selection
 // ::selection {
 
 // }
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+   -webkit-text-fill-color: var(--color-white);
+}

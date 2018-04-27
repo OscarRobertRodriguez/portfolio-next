@@ -1,0 +1,21 @@
+
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes autofill {
+  to {
+    color: #666;
+    background: transparent;
+  }
+}

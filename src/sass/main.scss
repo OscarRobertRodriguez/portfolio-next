@@ -8,18 +8,21 @@
 @import 'base/base';
 @import 'base/typography';
 @import 'base/utilities';
+@import 'base/animations';
 /* components */
+
+@import 'components/form';
+@import 'components/button';
+@import 'components/card';
+@import 'components/graph';
 
 /* layout */
 
 @import 'layout/header';
+@import 'layout/footer';
 
 /* pages */
 @import 'pages/home';
 
 
-.side-nav__icon {
-  fill: black;
-  width: 4rem;
-  height: 4rem;
-}
+
