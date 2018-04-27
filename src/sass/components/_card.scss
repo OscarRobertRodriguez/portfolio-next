@@ -1,0 +1,74 @@
+.card {
+  flex: 1;
+  text-align: center;
+  padding: 1rem 2rem;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  transition: all .2s;
+  &__front-side,
+  &__back-side {
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .2);
+    transition: all .5s;
+  }
+  &__front-side {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 2;
+    background-image: url('../images/bg1.png');
+    background-size: cover;
+    h2 {}
+    h4 {
+      margin-bottom: 2rem;
+    }
+    &:hover  {
+      transform: rotateX(8deg);
+    }
+    &:hover > * {
+      transform: rotateX(12deg);
+    }
+  }
+
+  &__back-side {
+    background-image: url('../images/nat-1.jpg');
+    background-size: cover;
+    background-repeat: none;
+    transform: rotateX(-180deg);
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    fill: var(--color-pink-dark);
+    transition: outline .2s .1s ease, fill .3s .1s, outline-offset .3s ease-in-out, transform .2s;
+    &:hover {
+      fill: var(--color-white);
+      outline: .3rem solid var(--color-white);
+      outline-offset: .7rem;
+      transform: rotateX(25deg);
+    }
+  }
+  &__radio {
+    display: none;
+  }
+  #flip--to-back:checked+&__front-side {
+    transform: rotateX(180deg);
+  }
+  #flip--to-back:checked~&__back-side {
+    transform: rotateX(0deg);
+  }
+  
+}
