@@ -1,0 +1,29 @@
+
+
+.footer {
+  min-width: 100%;
+  height: auto;
+  background-color: var(--color-pink-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+
+  &__form-group {
+    display: flex;
+  }
+
+  &__love-text {
+    padding-left: 2rem;
+  }
+  &__heart {
+    width: 3rem;
+    height: 3rem;
+    fill: red;
+    padding-left: .5rem;
+  }
+  &__heart:hover {
+     animation: pulsate .3s infinite;
+     filter: drop-shadow(5px);
+  }
+}
