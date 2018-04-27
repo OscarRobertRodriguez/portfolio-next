@@ -1,33 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-<body>
 
+<body>
+  <!-- header -->
   <header class="header">
     <div class="header__name">
       <h2>bob parker</h2>
     </div>
     <nav class="header__nav">
       <ul class="header__list">
-        <li class="header__item"><a class="header__link">About</a></li>
-        <li class="header__item"><a class="header__link">Projects</a></li>
-        <li class="header__item"><a class="header__link">Skills</a></li>
-        <li class="header__item"><a class="header__link">contact</a></li>
+        <li class="header__item">
+          <a href="#" class="header__link">About</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">Projects</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">Skills</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">contact</a>
+        </li>
       </ul>
     </nav>
     <div class="header__search">
-          <input type="search">
-            <svg class="side-nav__icon">
-              <use xlink:href="images/sprite.svg#icon-map"></use>
-              <span class="side-nav__name">Hotel</span>
-            </svg>
+      <div class="header__form-group">
+        <input class="header__search-input" type="text" placeholder="search" id='search-input'>
+        <label class="header__placeholder-text" for="search-input">search</label>
+        <svg class="header__icon">
+          <use xlink:href="#magnifying-glass"></use>
+        </svg>
       </div>
+    </div>
   </header>
-  
+  <!-- end header -->
+
+
+  <main class="main">
+
+    <!-- about section -->
+    <section class="about">
+      <h1 class="about__intro">hi im
+        <span class="about__letter">O</span>scar and I'm a front-end developer.</h1>
+    </section>
+
+    <!-- projects -->
+    <section class="projects">
+      <div class="switcher">
+        <radio classs="switcher__radio" id="project-1"></radio>
+        <radio classs="switcher__radio" id="project-2"></radio>
+        <radio classs="switcher__radio" id="project-3"></radio>
+        <radio classs="switcher__radio" id="project-4"></radio>
+        <radio classs="switcher__radio" id="project-5"></radio>
+        <radio classs="switcher__radio" id="project-6"></radio>
+        <radio classs="switcher__radio" id="project-7"></radio>
+        <radio classs="switcher__radio" id="project-8"></radio>
+
+        <div class="switcher__tabs">
+          <label for="project-1" class="switcher__label">calculator</label>
+          <label for="project-2" class="switcher__label">puzzle</label>
+          <label for="project-3" class="switcher__label">store</label>
+          <label for="project-4" class="switcher__label">image gallery</label>
+          <label for="project-5" class="switcher__label">tabs</label>
+          <label for="project-6" class="switcher__label">tik-tac-toe</label>
+          <label for="project-7" class="switcher__label">accordion</label>
+          <label for="project-8" class="switcher__label">business card</label>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- skills -->
+    <section class="skills">
+
+
+
+
+      <div class="graph__percentage-bar">
+        <div class="graph__front-end">50%</div>
+        <div class="graph__back-end">30%</div>
+      </div>
+
+      <div class="graph-container">
+        
+        <div class="graph">
+          <h3 class="graph__title pink-t">frontend development</h3>
+          <div class="graph__content">
+            <div class="graph__sidebar">
+              <ul class="graph__list">
+                <li class="graph__item">expert</li>
+                <li class="graph__item">proficient</li>
+                <li class="graph__item">competent</li>
+                <li class="graph__item">learning</li>
+              </ul>
+            </div>
+            <div class="graph__bars">
+              <div class="graph__bar graph__bar--expert graph__bar--color-1">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category">javascript</span>
+              </div>
+              <div class="graph__bar graph__bar--learning graph__bar--color-2">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category">HTML</span>
+              </div>
+              <div class="graph__bar graph__bar--competent graph__bar--color-3">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category">ReactJs</span>
+              </div>
+              <div class="graph__bar graph__bar--proficient graph__bar--color-4">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category">JQuery</span>
+              </div>
+              <div class="graph__bar graph__bar--competent graph__bar--color-5">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category">CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="graph">
+          <h3 class="graph__title blue-t">frontend development</h3>
+          <div class="graph__content">
+            <div class="graph__sidebar">
+              <ul class="graph__list">
+                <li class="graph__item">expert</li>
+                <li class="graph__item">proficient</li>
+                <li class="graph__item">competent</li>
+                <li class="graph__item">learning</li>
+              </ul>
+            </div>
+            <div class="graph__bars">
+              <div class="graph__bar graph__bar--expert graph__bar--color-6">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category">javascript</span>
+              </div>
+              <div class="graph__bar graph__bar--learning graph__bar--color-7">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category">HTML</span>
+              </div>
+              <div class="graph__bar graph__bar--competent graph__bar--color-3">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category">ReactJs</span>
+              </div>
+              <div class="graph__bar graph__bar--proficient graph__bar--color-4">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category">JQuery</span>
+              </div>
+              <div class="graph__bar graph__bar--competent graph__bar--color-2">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category">CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="graph-container">
+      <div class="graph">
+        <h3 class="graph__title">frontend development</h3>
+        <div class="graph__content">
+          <div class="graph__sidebar">
+            <ul class="graph__list">
+              <li class="graph__item">expert</li>
+              <li class="graph__item">proficient</li>
+              <li class="graph__item">competent</li>
+              <li class="graph__item">learning</li>
+            </ul>
+          </div>
+          <div class="graph__bars">
+            <div class="graph__bar graph__bar--expert graph__bar--color-6">
+              <span class="graph__tool-tip"></span>
+              <span class="graph__category">javascript</span>
+            </div>
+            <div class="graph__bar graph__bar--learning graph__bar--color-7">
+              <span class="graph__tool-tip"><span class="graph__tip-heading">Learning:</span>I just learned a couple of months ago</span>
+              <span class="graph__category">HTML</span>
+            </div>
+            <div class="graph__bar graph__bar--competent graph__bar--color-3">
+              <span class="graph__tool-tip">very good</span>
+              <span class="graph__category">ReactJs</span>
+            </div>
+            <div class="graph__bar graph__bar--proficient graph__bar--color-4">
+              <span class="graph__tool-tip">very good</span>
+              <span class="graph__category">JQuery</span>
+            </div>
+            <div class="graph__bar graph__bar--competent graph__bar--color-2">
+              <span class="graph__tool-tip">very good</span>
+              <span class="graph__category">CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+    </section>
+
+
+
+
+    <section class="contact">
+      <div class="contact__container">
+        <div class="card">
+          <input type="radio" class='card__radio' id='flip--to-front' name="flippers">
+          <input type="radio" class='card__radio' id='flip--to-back' name="flippers">
+          <div class="card__front-side">
+            <h2>Oscar R. Rodriguez</h2>
+            <h4>front-end developer</h4>
+            <div class="card__icons">
+              <a href="#">
+                <svg class="card__icon">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+
+              <a href="#">
+                <svg class="card__icon">
+                  <use xlink:href="#linkedin"></use>
+                </svg>
+              </a>
+
+              <a href="#">
+                <svg class="card__icon">
+                  <use xlink:href="#github"></use>
+                </svg>
+              </a>
+
+            </div>
+            <!-- end icons container -->
+            <label class="card__label--front" for="flip--to-back">
+              <svg class="card__icon">
+                <use xlink:href="#chevron-down"></use>
+              </svg>
+            </label>
+          </div>
+          <!-- end front-side -->
+          <div class="card__back-side">
+            <h2>hello bob</h2>
+            <label for="flip--to-front">
+              <svg class="card__icon">
+                <use xlink:href="#chevron-down"></use>
+              </svg>
+            </label>
+          </div>
+        </div>
+        <form class="form">
+          <div class="form__group">
+            <input class="form__input" type="text" id='name' placeholder="full name">
+            <label class="form__label" for="name">full name</label>
+          </div>
+          <div class="form__group">
+            <input class="form__input" type="email" id='email' placeholder="email">
+            <label class="form__label" for="email">email</label>
+          </div>
+          <div class="form__group form__group--contact-btn">
+            <button class='btn btn--submit' type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <footer class="footer">
+    <div class="footer__form-group">
+      <p class="footer__content">&copy; 2018 - Oscar Rodriguez</p>
+      <p class="footer__love-text">Made with</p>
+      <svg class="footer__heart">
+        <use xlink:href="#heart"></use>
+      </svg>
+    </div>
+  </footer>
+
 </body>
+
 </html>

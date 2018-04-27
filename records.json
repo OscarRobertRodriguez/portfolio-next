@@ -8,7 +8,10 @@
           "node_modules/lodash/lodash.js": 2,
           "node_modules/html-webpack-plugin/lib/loader.js!src/index.html": 3,
           "node_modules/url-loader/dist/cjs.js??ref--9!src/images/tick.png": 0,
-          "node_modules/html-webpack-plugin/lib/loader.js!node_modules/html-loader/index.js??ref--5-0!src/index.html": 1
+          "node_modules/html-webpack-plugin/lib/loader.js!node_modules/html-loader/index.js??ref--5-0!src/index.html": 1,
+          "node_modules/html-webpack-plugin/lib/loader.js!node_modules/html-loader/index.js??ref--4-0!src/index.html": 0,
+          "node_modules/svg-sprite-loader/lib/loader.js??ref--7!src/images/SVG/aircraft-landing.svg": 1,
+          "node_modules/svg-sprite-loader/lib/loader.js!src/images/SVG/aircraft-landing.svg": 1
         },
         "usedIds": {
           "0": 0,
@@ -21,7 +24,7 @@
         "byName": {},
         "bySource": {},
         "usedIds": [
-          1
+          0
         ]
       }
     }
@@ -84,7 +87,13 @@
       "node_modules/babel-loader/lib/index.js!src/app/images.js": 4,
       "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--6-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/postcss-loader/lib/index.js??ref--6-3!src/styles/main.scss": 5,
       "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--6-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/lib/index.js??ref--6-4!src/styles/main.scss": 5,
-      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--7-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/lib/index.js??ref--7-4!src/sass/main.scss": 0
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--7-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/lib/index.js??ref--7-4!src/sass/main.scss": 0,
+      "node_modules/webpack/buildin/global.js": 0,
+      "node_modules/svg-sprite-loader/runtime/browser-sprite.build.js": 2,
+      "node_modules/svg-baker-runtime/browser-symbol.js": 3,
+      "node_modules/babel-loader/lib/index.js!src/app/index.js 1e48e89bb27e172a6e6b37b8953e1315": 4,
+      "node_modules/babel-loader/lib/index.js!src/app/index.js 46a118c6386edbc2d8a7e0be4779aeb3": 0,
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--6-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/lib/index.js??ref--6-4!src/sass/main.scss": 1
     },
     "usedIds": {
       "0": 0,
@@ -98,12 +107,14 @@
   "chunks": {
     "byName": {
       "manifest": 0,
-      "app": 1
+      "app": 1,
+      "vendors~app": 2
     },
     "bySource": {},
     "usedIds": [
       0,
-      1
+      1,
+      2
     ]
   },
   "extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js!src/styles/main.css": [
@@ -258,18 +269,107 @@
       "modules": {
         "byIdentifier": {
           "node_modules/css-loader/lib/css-base.js": 0,
-          "node_modules/css-loader/index.js!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/lib/index.js??ref--7-4!src/sass/main.scss": 1
+          "node_modules/css-loader/index.js!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/lib/index.js??ref--7-4!src/sass/main.scss": 1,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-700.woff": 2,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-700.woff2": 3,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-regular.woff": 4,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-regular.woff2": 5,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-300.woff": 6,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-300.woff2": 7,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-100.woff": 8,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-100.woff2": 9,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-700.woff": 10,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-700.woff2": 11,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-600.woff": 12,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-600.woff2": 13,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-regular.woff": 14,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-regular.woff2": 15,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-300.woff": 16,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-300.woff2": 17,
+          "node_modules/css-loader/lib/url/escape.js": 18
         },
         "usedIds": {
           "0": 0,
-          "1": 1
+          "1": 1,
+          "2": 2,
+          "3": 3,
+          "4": 4,
+          "5": 5,
+          "6": 6,
+          "7": 7,
+          "8": 8,
+          "9": 9,
+          "10": 10,
+          "11": 11,
+          "12": 12,
+          "13": 13,
+          "14": 14,
+          "15": 15,
+          "16": 16,
+          "17": 17,
+          "18": 18
         }
       },
       "chunks": {
         "byName": {},
         "bySource": {},
         "usedIds": [
-          0
+          1
+        ]
+      }
+    }
+  ],
+  "extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/lib/index.js??ref--6-4!src/sass/main.scss": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-700.woff": 0,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-700.woff2": 1,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-regular.woff": 2,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-regular.woff2": 3,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-300.woff": 4,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-300.woff2": 5,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-100.woff": 6,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/roboto-slab-v7-latin-100.woff2": 7,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-700.woff": 8,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-700.woff2": 9,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-600.woff": 10,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-600.woff2": 11,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-regular.woff": 12,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-regular.woff2": 13,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-300.woff": 14,
+          "node_modules/url-loader/dist/cjs.js??ref--8!src/fonts/open-sans-v15-latin-300.woff2": 15,
+          "node_modules/css-loader/lib/css-base.js": 16,
+          "node_modules/css-loader/lib/url/escape.js": 17,
+          "node_modules/css-loader/index.js!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/lib/index.js??ref--6-4!src/sass/main.scss": 18
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3,
+          "4": 4,
+          "5": 5,
+          "6": 6,
+          "7": 7,
+          "8": 8,
+          "9": 9,
+          "10": 10,
+          "11": 11,
+          "12": 12,
+          "13": 13,
+          "14": 14,
+          "15": 15,
+          "16": 16,
+          "17": 17,
+          "18": 18
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": [
+          1
         ]
       }
     }
