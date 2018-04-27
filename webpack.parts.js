@@ -115,7 +115,7 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
   },
 });
 
-exports.loadSVGS = ({ include, exclude } = {}) => ({
+exports.loadSVGS = ({ include, exclude, options } = {}) => ({
   module: {
     rules: [
       {
@@ -123,7 +123,8 @@ exports.loadSVGS = ({ include, exclude } = {}) => ({
         include,
         exclude,
         use: {
-          loader: 'url-loader',
+          loader: 'svg-sprite-loader',
+          options,
         },
       },
     ],

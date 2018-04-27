@@ -4,6 +4,7 @@ const parts = require('./webpack.parts');
 const merge = require('webpack-merge');
 const path = require('path');
 const glob = require('glob-all');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const PATHS = {
   app: path.join(__dirname, 'src/app'),
@@ -13,7 +14,7 @@ const PATHS = {
 
 const commonConfig = merge([
   {
-    plugins: [new SystemBellPlugin(), new FriendlyErrorsWebpackPlugin()],
+    plugins: [new SystemBellPlugin(), new FriendlyErrorsWebpackPlugin(), new SpriteLoaderPlugin()],
   },
   parts.loadSVGS(),
   parts.loadHTML(),
