@@ -4,3 +4,6 @@ import '../images/SVG/twitter.svg';
 import '../images/SVG/github.svg';
 import '../images/SVG/linkedin.svg';
 import '../images/SVG/chevron-down.svg';
+import '../images/SVG/css32.svg';
+import '../images/SVG/html5.svg';
+import '../images/SVG/javascript.svg';
