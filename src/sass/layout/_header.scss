@@ -3,9 +3,25 @@
   width: 100%;
   background-color: var(--color-pink-dark);
   display: flex;
+  align-items: center;
   border-bottom: 4px solid var(--color-pink-light); 
   position: fixed;
   z-index:9999;
+  height: 10rem;
+  
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    height: 15rem;
+  }
+
+  @include respond(phone) {
+    height: 12rem;
+  }
+
+    @include respond(phone-small) {
+      height: 25rem;
+    }
+  
   // header name
   &__name {
     margin-left: 2rem;
@@ -21,17 +37,31 @@
    */
   &__nav {
     margin-right: auto;
-    flex: 0 0 60%;
+    flex: 0 0 40%;
+    align-self: flex-end;
+
+    @include respond(tab-port) {
+      order: 1;
+      flex: 0 0 100%;
+    }
+  
   }
   &__list {
     list-style-type: none;
     display: flex;
     height: 100%;
+      @include respond(phone-small) {
+        flex-wrap: wrap;
+      }
   }
   &__item {
     transition: all .2s;
     cursor: pointer;
     flex: 1;
+
+      @include respond(phone-small) {
+        flex: 0 0 50%;
+      }
   }
   &__link {
     color: var(--color-white);
@@ -41,13 +71,27 @@
     &:visited {
       text-decoration: none;
       text-transform: capitalize;
-      font-size: 2rem;
+      font-size: 3rem;
+      padding:1rem;
+      padding-bottom: 2rem;
       height: 100%;
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center;
       transition: color .2s .1s, background-color .2s ease;
+
+        @include respond(tab-land) {
+          font-size: 2.5rem;
+          padding-bottom: 2.5rem;
+        }
+
+      @include respond(tab-port) {
+        padding-bottom: 1rem;
+      }
+
+        @include respond(phone-small) {
+          font-size: 2rem;
+        }
+    
     }
     &:active {
       letter-spacing: 1px;
@@ -88,8 +132,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: auto;
+    margin-right: 3rem;
     position: relative;
+
+    @include respond(tab-port) {
+      margin-left: auto;
+      margin-right: 2rem;
+      margin-top: 1rem;
+    }
+
+    @include respond(phone-small) {
+     flex: 0 0 100%;
+     padding :1rem;
+    }
   }
   &__search-input {
     color: var(--color-white);
@@ -101,9 +156,17 @@
     font-size: 1.6rem;
     transition: all .5s ;
 
+      @include respond(phone-small) {
+        flex: 0 0 70%;
+      }
+
     &:focus {
       outline: none;
       border-bottom-color: var(--color-white);
+      
+        @include respond(phone-small) {
+          flex: 0 0 80%;
+        }
     }
     &::-webkit-input-placeholder {
       color: #fff;
@@ -114,22 +177,35 @@
   &__form-group {
     position: relative;
     display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0 1rem;
   }
 
   &__placeholder-text {
     display: block;
     transition: all .2s;
     position: absolute;
-    margin-top: -4rem;
+    margin-top: -1.5rem;
     text-transform: uppercase;
-    font-size: .6rem;
-     transition: all .3s;
+    font-size: 1rem;
+    transition: all .3s;
+    left: 1rem;
+
+      @include respond(phone-small) {
+        left: 3rem;
+      }
+    
   }
 
    &__search-input:placeholder-shown + &__placeholder-text {
      opacity: 0;
      visibility: hidden;
      transform: translateY(2.3rem);
+   }
+
+   &__search-input:not(:placeholder-shown) {
+     flex: 0 0 80%;
    }
 
    &__search-input:not(:placeholder-shown)~&__icon {
@@ -147,5 +223,10 @@
     padding: .2rem;
     box-sizing: content-box;
     fill: var(--color-pink-light);
+    cursor:pointer;
+
+    &:hover {
+      fill: var(--color-white);
+    }
   }
 }

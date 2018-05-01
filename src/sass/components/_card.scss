@@ -1,11 +1,32 @@
 .card {
-  flex: 1;
+ flex: 1;
   text-align: center;
   padding: 1rem 2rem;
   transform-style: preserve-3d;
   position: relative;
   width: 100%;
   transition: all .2s;
+
+  @include respond(tab-port) {
+    height: 30rem;
+    flex: none;
+  }
+
+  // &--gallery {
+  //       flex: 0 0 80%;
+  //       width: 60%;
+  //       height: 100%;
+  //       border-radius: 3px;
+
+  //       &__front-side {
+
+  //         &:hover {
+  //           transform: rotateX(15deg);
+  //         }
+  //       }
+  // }
+
+
   &__front-side,
   &__back-side {
     height: 100%;
@@ -37,6 +58,8 @@
     }
   }
 
+
+
   &__back-side {
     background-image: url('../images/nat-1.jpg');
     background-size: cover;
@@ -64,7 +87,7 @@
   &__radio {
     display: none;
   }
-  #flip--to-back:checked+&__front-side {
+  #flip--to-back:checked + &__front-side {
     transform: rotateX(180deg);
   }
   #flip--to-back:checked~&__back-side {

@@ -53,5 +53,36 @@
 
 
 
+}
 
+
+
+.btn-text {
+  &:visited,
+  &:link {
+    color: #fff;
+    padding: .5rem 1rem;
+    display: inline-block;
+    border: 1px solid currentColor;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    font-size: 1.4rem;
+    transition: all .2s;
+  }
+
+  &:hover {
+    background-color: var(--color-pink-light-2);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    transform: translateY(0);
+  }
+
+  span {
+    display: inline-block;
+    margin-left: 2px;
+  }
 }

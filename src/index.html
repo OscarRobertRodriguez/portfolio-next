@@ -12,7 +12,7 @@
   <!-- header -->
   <header class="header">
     <div class="header__name">
-      <h2>bob parker</h2>
+      <h2>oscar rodriguez</h2>
     </div>
     <nav class="header__nav">
       <ul class="header__list">
@@ -47,22 +47,27 @@
 
     <!-- about section -->
     <section class="about">
-      <h1 class="about__intro">hi im
-        <span class="about__letter">O</span>scar and I'm a front-end developer.</h1>
+      <h1 class="about__intro">Hi I'm
+        <span class="about__name">Oscar</span>. I'm a frontend web developer
+      </h1>
     </section>
 
     <!-- projects -->
     <section class="projects">
+      <h2 class="heading__sub">Projects</h2>
+      <!-- switcher component -->
       <div class="switcher">
-        <radio classs="switcher__radio" id="project-1"></radio>
-        <radio classs="switcher__radio" id="project-2"></radio>
-        <radio classs="switcher__radio" id="project-3"></radio>
-        <radio classs="switcher__radio" id="project-4"></radio>
-        <radio classs="switcher__radio" id="project-5"></radio>
-        <radio classs="switcher__radio" id="project-6"></radio>
-        <radio classs="switcher__radio" id="project-7"></radio>
-        <radio classs="switcher__radio" id="project-8"></radio>
-
+         
+        <!-- end accordion radios -->
+        <input type="radio" class="switcher__radio" id="project-1" name='switcher'>
+        <input type="radio" class="switcher__radio" id="project-2" name='switcher'>
+        <input type="radio" class="switcher__radio" id="project-3" name='switcher'>
+        <input type="radio" class="switcher__radio" id="project-4" name='switcher'>
+        <input type="radio" class="switcher__radio" id="project-5" name='switcher'>
+        <input type="radio" class="switcher__radio" id="project-6" name='switcher'>
+        <input type="radio" class="switcher__radio" id="project-7" name='switcher'>
+        <input type="radio" class="switcher__radio" id="project-8" name='switcher'>
+        <!-- switcher tabs -->
         <div class="switcher__tabs">
           <label for="project-1" class="switcher__label">calculator</label>
           <label for="project-2" class="switcher__label">puzzle</label>
@@ -73,14 +78,239 @@
           <label for="project-7" class="switcher__label">accordion</label>
           <label for="project-8" class="switcher__label">business card</label>
         </div>
+        <!-- begin switcher display -->
+        <div class="switcher__display">
+          <h2>click a tab</h2>
+          <!-- pane 1 -->
+          <div class="switcher__display-pane switcher__display-pane--project-1">
+            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
+            <div class="switcher__info">
+              <div class="switcher__icons">
+                <span class="switcher__tech">Technologies:</span>
+                <svg class="switcher__icon">
+                  <use xlink:href="#javascript"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#html5"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#css32"></use>
+                </svg>
+              </div>
+              <div class="switcher__learn-more">
+                <a href="#" class="btn-text">learn more
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- <p class="switcher__intro-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla maiores unde debitis libero officia obcaecati? Error, voluptas doloribus unde illum, laboriosam tempore, amet alias quis reprehenderit id eaque consectetur.
+            </p>  -->
+
+
+
+          </div>
+          <!-- pane 2  -->
+          <div class="switcher__display-pane switcher__display-pane--project-2">
+            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
+            <div class="switcher__info">
+              <div class="switcher__icons">
+                <span class="switcher__tech">Technologies:</span>
+                <svg class="switcher__icon">
+                  <use xlink:href="#javascript"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#html5"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#css32"></use>
+                </svg>
+              </div>
+              <div class="switcher__learn-more">
+                <a href="#" class="btn-text">learn more
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- pane 3 -->
+          <div class="switcher__display-pane switcher__display-pane--project-3">
+            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
+            <div class="switcher__info">
+              <div class="switcher__icons">
+                <span class="switcher__tech">Technologies:</span>
+                <svg class="switcher__icon">
+                  <use xlink:href="#javascript"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#html5"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#css32"></use>
+                </svg>
+              </div>
+              <div class="switcher__learn-more">
+                <a href="#" class="btn-text">learn more
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+
+
+
+          </div>
+          <!-- pane 4 -->
+          <div class="switcher__display-pane switcher__display-pane--project-4">
+            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
+            <div class="switcher__info">
+              <div class="switcher__icons">
+                <span class="switcher__tech">Technologies:</span>
+                <svg class="switcher__icon">
+                  <use xlink:href="#javascript"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#html5"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#css32"></use>
+                </svg>
+              </div>
+              <div class="switcher__learn-more">
+                <a href="#" class="btn-text">learn more
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- pane 5  -->
+          <div class="switcher__display-pane switcher__display-pane--project-5">
+            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
+            <div class="switcher__info">
+              <div class="switcher__icons">
+                <span class="switcher__tech">Technologies:</span>
+                <svg class="switcher__icon">
+                  <use xlink:href="#javascript"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#html5"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#css32"></use>
+                </svg>
+              </div>
+              <div class="switcher__learn-more">
+                <a href="#" class="btn-text">learn more
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+          <!-- pane 6 -->
+          <div class="switcher__display-pane switcher__display-pane--project-6">
+            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
+            <div class="switcher__info">
+              <div class="switcher__icons">
+                <span class="switcher__tech">Technologies:</span>
+                <svg class="switcher__icon">
+                  <use xlink:href="#javascript"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#html5"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#css32"></use>
+                </svg>
+              </div>
+              <div class="switcher__learn-more">
+                <a href="#" class="btn-text">learn more
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+          <!-- pane 7 -->
+          <div class="switcher__display-pane switcher__display-pane--project-7">
+            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
+            <div class="switcher__info">
+              <div class="switcher__icons">
+                <span class="switcher__tech">Technologies:</span>
+                <svg class="switcher__icon">
+                  <use xlink:href="#javascript"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#html5"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#css32"></use>
+                </svg>
+              </div>
+              <div class="switcher__learn-more">
+                <a href="#" class="btn-text">learn more
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+          <!-- pane 8 -->
+          <div class="switcher__display-pane switcher__display-pane--project-8">
+            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
+            <div class="switcher__info">
+              <div class="switcher__icons">
+                <span class="switcher__tech">Technologies:</span>
+                <svg class="switcher__icon">
+                  <use xlink:href="#javascript"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#html5"></use>
+                </svg>
+                <svg class="switcher__icon">
+                  <use xlink:href="#css32"></use>
+                </svg>
+              </div>
+              <div class="switcher__learn-more">
+                <a href="#" class="btn-text">learn more
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+
+
+        </div>
+        <!-- end switcher display -->
 
       </div>
+      <!-- end switcher component -->
     </section>
 
     <!-- skills -->
     <section class="skills">
 
-
+      <h2 class="heading__sub">skills</h2>
 
 
       <div class="graph__percentage-bar">
@@ -89,7 +319,7 @@
       </div>
 
       <div class="graph-container">
-        
+
         <div class="graph">
           <h3 class="graph__title pink-t">frontend development</h3>
           <div class="graph__content">
@@ -104,23 +334,23 @@
             <div class="graph__bars">
               <div class="graph__bar graph__bar--expert graph__bar--color-1">
                 <span class="graph__tool-tip">very good</span>
-                <span class="graph__category">javascript</span>
+                <span class="graph__category graph__category--1">javascript</span>
               </div>
               <div class="graph__bar graph__bar--learning graph__bar--color-2">
                 <span class="graph__tool-tip">very good</span>
-                <span class="graph__category">HTML</span>
+                <span class="graph__category graph__category--2">HTML</span>
               </div>
               <div class="graph__bar graph__bar--competent graph__bar--color-3">
                 <span class="graph__tool-tip">very good</span>
-                <span class="graph__category">ReactJs</span>
+                <span class="graph__category graph__category--3">ReactJs</span>
               </div>
               <div class="graph__bar graph__bar--proficient graph__bar--color-4">
                 <span class="graph__tool-tip">very good</span>
-                <span class="graph__category">JQuery</span>
+                <span class="graph__category graph__category--4">JQuery</span>
               </div>
               <div class="graph__bar graph__bar--competent graph__bar--color-5">
                 <span class="graph__tool-tip">very good</span>
-                <span class="graph__category">CSS</span>
+                <span class="graph__category graph__category--5">CSS</span>
               </div>
             </div>
           </div>
@@ -140,65 +370,65 @@
             <div class="graph__bars">
               <div class="graph__bar graph__bar--expert graph__bar--color-6">
                 <span class="graph__tool-tip">very good</span>
-                <span class="graph__category">javascript</span>
+                <span class="graph__category graph__category--1">javascript</span>
               </div>
               <div class="graph__bar graph__bar--learning graph__bar--color-7">
                 <span class="graph__tool-tip">very good</span>
-                <span class="graph__category">HTML</span>
+                <span class="graph__category graph__category--2">HTML</span>
               </div>
               <div class="graph__bar graph__bar--competent graph__bar--color-3">
                 <span class="graph__tool-tip">very good</span>
-                <span class="graph__category">ReactJs</span>
+                <span class="graph__category graph__category--3">ReactJs</span>
               </div>
               <div class="graph__bar graph__bar--proficient graph__bar--color-4">
                 <span class="graph__tool-tip">very good</span>
-                <span class="graph__category">JQuery</span>
+                <span class="graph__category graph__category--4">JQuery</span>
               </div>
               <div class="graph__bar graph__bar--competent graph__bar--color-2">
                 <span class="graph__tool-tip">very good</span>
-                <span class="graph__category">CSS</span>
+                <span class="graph__category graph__category--5">CSS</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-<div class="graph-container">
-      <div class="graph">
-        <h3 class="graph__title">frontend development</h3>
-        <div class="graph__content">
-          <div class="graph__sidebar">
-            <ul class="graph__list">
-              <li class="graph__item">expert</li>
-              <li class="graph__item">proficient</li>
-              <li class="graph__item">competent</li>
-              <li class="graph__item">learning</li>
-            </ul>
-          </div>
-          <div class="graph__bars">
-            <div class="graph__bar graph__bar--expert graph__bar--color-6">
-              <span class="graph__tool-tip"></span>
-              <span class="graph__category">javascript</span>
+      <div class="graph-container">
+        <div class="graph">
+          <h3 class="graph__title">frontend development</h3>
+          <div class="graph__content">
+            <div class="graph__sidebar">
+              <ul class="graph__list">
+                <li class="graph__item">expert</li>
+                <li class="graph__item">proficient</li>
+                <li class="graph__item">competent</li>
+                <li class="graph__item">learning</li>
+              </ul>
             </div>
-            <div class="graph__bar graph__bar--learning graph__bar--color-7">
-              <span class="graph__tool-tip"><span class="graph__tip-heading">Learning:</span>I just learned a couple of months ago</span>
-              <span class="graph__category">HTML</span>
-            </div>
-            <div class="graph__bar graph__bar--competent graph__bar--color-3">
-              <span class="graph__tool-tip">very good</span>
-              <span class="graph__category">ReactJs</span>
-            </div>
-            <div class="graph__bar graph__bar--proficient graph__bar--color-4">
-              <span class="graph__tool-tip">very good</span>
-              <span class="graph__category">JQuery</span>
-            </div>
-            <div class="graph__bar graph__bar--competent graph__bar--color-2">
-              <span class="graph__tool-tip">very good</span>
-              <span class="graph__category">CSS</span>
+            <div class="graph__bars">
+              <div class="graph__bar graph__bar--expert graph__bar--color-6">
+                <span class="graph__tool-tip">getting better</span>
+                <span class="graph__category graph__category--1">javascript</span>
+              </div>
+              <div class="graph__bar graph__bar--learning graph__bar--color-7">
+                <span class="graph__tool-tip">still learning</span>
+                <span class="graph__category graph__category--2">HTML</span>
+              </div>
+              <div class="graph__bar graph__bar--competent graph__bar--color-3">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category graph__category--3">ReactJs</span>
+              </div>
+              <div class="graph__bar graph__bar--proficient graph__bar--color-4">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category graph__category--4">JQuery</span>
+              </div>
+              <div class="graph__bar graph__bar--competent graph__bar--color-2">
+                <span class="graph__tool-tip">very good</span>
+                <span class="graph__category graph__category--5">CSS</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-</div>
 
     </section>
 
@@ -206,6 +436,7 @@
 
 
     <section class="contact">
+      <h2 class="heading__sub">Contact</h2>
       <div class="contact__container">
         <div class="card">
           <input type="radio" class='card__radio' id='flip--to-front' name="flippers">
