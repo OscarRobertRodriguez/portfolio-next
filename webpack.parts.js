@@ -5,8 +5,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const postcssImport = require('postcss-import');
-const mediaPostCSS = require('css-mqpacker');
 
 exports.devServer = ({ host, port } = {}) => ({
   devServer: {
@@ -21,7 +19,7 @@ exports.devServer = ({ host, port } = {}) => ({
 exports.extractCSS = ({ include, exclude, use }) => {
   const plugin = new ExtractTextPlugin({
     allChunks: true,
-    filename: '[name].[md5:contenthash:hex:20].css',
+    filename: 'css/[name].[md5:contenthash:hex:20].css',
   });
   return {
     module: {
@@ -55,7 +53,8 @@ exports.loadHTML = ({ include, exclude } = {}) => ({
             loader: 'html-loader',
             options: {
               minimize: true,
-              attrs: ['img:src', 'xlink: href', 'img:srcset'],
+              attrs: ['img:src', 'img:srcset', 'source:srcset', 'xlink: href'],
+              interpolate: true,
             },
           },
         ],
@@ -98,6 +97,67 @@ exports.postCSSPlugins = () => ({
     plugins: () => [postcssNext()],
   },
 });
+
+exports.loadResponsiveImages = ({ include, exclude, options } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g)$/i,
+        include,
+        exclude,
+        use: {
+          loader: 'responsive-loader',
+          options,
+        },
+      },
+    ],
+  },
+});
+
+// exports.loadImagesOpti = ({ include, exclude } = {}) => ({
+//   module: {
+//     rules: [
+//       {
+//         test: /\.(png|jpg)$/,
+//         include,
+//         exclude,
+//         use: [
+//           {
+//             loader: 'url-loader',
+//             options: {
+//               limit: 10000,
+//               name: './images/[name].[hash:4].[ext]',
+//             },
+//           },
+//           {
+//             loader: 'image-webpack-loader',
+//             options: {
+//               mozjpeg: {
+//                 progressive: true,
+//                 quality: 85,
+//               },
+//               // optipng.enabled: false will disable optipng
+//               optipng: {
+//                 enabled: false,
+//               },
+//               pngquant: {
+//                 quality: '65-90',
+//                 speed: 4,
+//               },
+//               gifsicle: {
+//                 interlaced: false,
+//               },
+//               // the webp option will enable WEBP
+//               webp: {
+//                 quality: 75,
+//               },
+//             },
+//           },
+//         ],
+//       },
+//     ],
+//   },
+// });
 
 exports.loadImages = ({ include, exclude, options } = {}) => ({
   module: {
