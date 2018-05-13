@@ -7,11 +7,21 @@ body {
 }
 
 
+
+.heading__main {
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--color-pink-light);
+  text-transform: uppercase;
+}
+
+
 .heading__sub {
   font-size: 5rem;
   color: var(--color-pink-light);
   text-transform: uppercase;
-  align-self: flex-start;
+  text-align: center;
   padding: 3rem 4rem;
   padding-left: 1rem;
 }

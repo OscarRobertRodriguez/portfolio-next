@@ -8,7 +8,7 @@
       font-size: var(--default-font-size);
       color: var(--color-white);
       border: 2px solid currentColor;
-      background-color: transparent;
+      background-color: var(--color-pink-dark);
       text-decoration: none;
       border-radius: 10rem;
       display: inline-block;
@@ -61,7 +61,7 @@
   &:visited,
   &:link {
     color: #fff;
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
     display: inline-block;
     border: 1px solid currentColor;
     text-transform: uppercase;
@@ -69,10 +69,10 @@
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
     font-size: 1.4rem;
     transition: all .2s;
+    background-color: var(--color-pink-light-2);
   }
 
   &:hover {
-    background-color: var(--color-pink-light-2);
     transform: translateY(-2px);
   }
 
