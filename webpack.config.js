@@ -1,3 +1,5 @@
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const SystemBellPlugin = require('system-bell-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const parts = require('./webpack.parts');
@@ -5,6 +7,7 @@ const merge = require('webpack-merge');
 const path = require('path');
 const glob = require('glob-all');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const sharp = require('responsive-loader/sharp');
 
 const PATHS = {
   app: path.join(__dirname, 'src/app'),
@@ -16,19 +19,49 @@ const commonConfig = merge([
   {
     plugins: [new SystemBellPlugin(), new FriendlyErrorsWebpackPlugin(), new SpriteLoaderPlugin()],
   },
-  parts.loadSVGS(),
+  {
+    output: {
+      publicPath: '/',
+    },
+  },
   parts.loadHTML(),
+  parts.loadResponsiveImages({
+    options: {
+      adapter: sharp,
+      name: 'images/[name]-[width].[ext]',
+      sizes: [350, 600, 700, 800, 1200],
+      quality: 100,
+    },
+  }),
+  parts.loadSVGS(),
   parts.loadJavaScript({ include: PATHS.app }),
 ]);
 
 const productionConfig = merge([
   {
     output: {
-      publicPath: './',
+      path: PATHS.build,
+      publicPath: '../',
       chunkFilename: '[name].[chunkhash:4].js',
       filename: '[name].[chunkhash:4].js',
     },
     recordsPath: path.join(__dirname, 'records.json'),
+  },
+  {
+    plugins: [
+      new ImageminPlugin({
+        pngquant: {
+          quality: '65-70',
+          speed: 4,
+        },
+        plugins: [
+          imageminMozjpeg({
+            progressive: true,
+            quality: 80,
+          }),
+        ],
+      }),
+    ],
   },
   parts.clean(PATHS.build),
   parts.extractCSS({ use: ['css-loader', 'sass-loader', parts.postCSSPlugins()] }),
@@ -86,17 +119,19 @@ const developmentConfig = merge([
 module.exports = mode => {
   const pages = [
     parts.page({
+      path: 'home',
       title: 'Webpack demo ',
       entry: { app: PATHS.app },
       template: './src/index.html',
     }),
-    // parts.page({
-    //   title: 'Another demo',
-    //   path: 'another',
-    //   entry: {
-    //     another: path.join(PATHS.app, 'another.js'),
-    //   },
-    // }),
+    parts.page({
+      path: 'another',
+      title: 'more projects',
+      entry: {
+        app: PATHS.app,
+      },
+      template: './src/sitePages/moreProjects.html',
+    }),
   ];
   const config = mode === 'production' ? productionConfig : developmentConfig;
   return pages.map(page => merge(commonConfig, config, page, { mode }));

@@ -17,16 +17,16 @@
     <nav class="header__nav">
       <ul class="header__list">
         <li class="header__item">
-          <a href="#" class="header__link">About</a>
+          <a href="#aboutLink" class="header__link">About</a>
         </li>
         <li class="header__item">
-          <a href="#" class="header__link">Projects</a>
+          <a href="#projectsLink" class="header__link">Projects</a>
         </li>
         <li class="header__item">
-          <a href="#" class="header__link">Skills</a>
+          <a href="#skillsLink" class="header__link">Skills</a>
         </li>
         <li class="header__item">
-          <a href="#" class="header__link">contact</a>
+          <a href="#contactLink" class="header__link">contact</a>
         </li>
       </ul>
     </nav>
@@ -46,18 +46,27 @@
   <main class="main">
 
     <!-- about section -->
-    <section class="about">
+    <section class="about" id="aboutLink">
       <h1 class="about__intro">Hi I'm
         <span class="about__name">Oscar</span>. I'm a frontend web developer
       </h1>
     </section>
 
     <!-- projects -->
-    <section class="projects">
+    <section class="projects" id='projectsLink'>
       <h2 class="heading__sub">Projects</h2>
       <!-- switcher component -->
       <div class="switcher">
-         
+        <!-- acc radios -->
+        <input type="checkbox" class="switcher__radio" id="acc-project-1" name='acc-radios'>
+        <input type="checkbox" class="switcher__radio" id="acc-project-2" name='acc-radios'>
+        <input type="checkbox" class="switcher__radio" id="acc-project-3" name='acc-radios'>
+        <input type="checkbox" class="switcher__radio" id="acc-project-4" name='acc-radios'>
+        <input type="checkbox" class="switcher__radio" id="acc-project-5" name='acc-radios'>
+        <input type="checkbox" class="switcher__radio" id="acc-project-6" name='acc-radios'>
+        <input type="checkbox" class="switcher__radio" id="acc-project-7" name='acc-radios'>
+        <input type="checkbox" class="switcher__radio" id="acc-project-8" name='acc-radios'>
+
         <!-- end accordion radios -->
         <input type="radio" class="switcher__radio" id="project-1" name='switcher'>
         <input type="radio" class="switcher__radio" id="project-2" name='switcher'>
@@ -82,220 +91,283 @@
         <div class="switcher__display">
           <h2>click a tab</h2>
           <!-- pane 1 -->
-          <div class="switcher__display-pane switcher__display-pane--project-1">
-            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
-            <div class="switcher__info">
-              <div class="switcher__icons">
-                <span class="switcher__tech">Technologies:</span>
-                <svg class="switcher__icon">
-                  <use xlink:href="#javascript"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#html5"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#css32"></use>
-                </svg>
+          <!-- accordion label calculator -->
+          <label for="acc-project-1" class="switcher__accordion-label">Calculator
+            <svg class="switcher__accordion-icon">
+              <use xlink:href="#chevron-down"></use>
+            </svg>
+          </label>
+          <!-- accordion wrapper -->
+          <div class="switcher__accordion-wrapper">
+            <!-- content for pane -->
+            <div class="switcher__display-pane switcher__display-pane--project-1">
+              <img class="switcher__image" src="images/nat-1.jpg" alt="image">
+              <div class="switcher__info switcher__info--1">
+                <div class="switcher__icons">
+                  <span class="switcher__tech">Technologies:</span>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#javascript"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#html5"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#css32"></use>
+                  </svg>
+                </div>
+                <div class="switcher__learn-more">
+                  <a href="#" class="btn-text">learn more
+                    <span>&rarr;</span>
+                  </a>
+                </div>
               </div>
-              <div class="switcher__learn-more">
-                <a href="#" class="btn-text">learn more
-                  <span>&rarr;</span>
-                </a>
-              </div>
+
+
             </div>
-
-            <!-- <p class="switcher__intro-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla maiores unde debitis libero officia obcaecati? Error, voluptas doloribus unde illum, laboriosam tempore, amet alias quis reprehenderit id eaque consectetur.
-            </p>  -->
-
-
-
           </div>
+
           <!-- pane 2  -->
-          <div class="switcher__display-pane switcher__display-pane--project-2">
-            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
-            <div class="switcher__info">
-              <div class="switcher__icons">
-                <span class="switcher__tech">Technologies:</span>
-                <svg class="switcher__icon">
-                  <use xlink:href="#javascript"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#html5"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#css32"></use>
-                </svg>
+          <!-- accordion label puzzle -->
+          <label for="acc-project-2" class="switcher__accordion-label">Puzzle
+            <svg class="switcher__accordion-icon">
+              <use xlink:href="#chevron-down"></use>
+            </svg>
+          </label>
+          <!-- accordion wrapper -->
+          <div class="switcher__accordion-wrapper">
+            <!-- content for pane -->
+            <div class="switcher__display-pane switcher__display-pane--project-2">
+              <!-- <img class="switcher__image" srcset="images/puzzle.jpg 1200w, images/puzzle@2x.jpg 2400w"
+                sizes="(max-width: 900px) 20vw"> -->
+              <img class="switcher__image" src="${require('./images/puzzle.jpg')}" srcset="${require('./images/puzzle.jpg').srcSet}" alt="image">
+              <div class="switcher__info switcher__info--2">
+                <div class="switcher__icons">
+                  <span class="switcher__tech">Technologies:</span>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#javascript"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#html5"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#css32"></use>
+                  </svg>
+                </div>
+                <div class="switcher__learn-more">
+                  <a href="#" class="btn-text">learn more
+                    <span>&rarr;</span>
+                  </a>
+                </div>
               </div>
-              <div class="switcher__learn-more">
-                <a href="#" class="btn-text">learn more
-                  <span>&rarr;</span>
-                </a>
-              </div>
+
             </div>
           </div>
 
           <!-- pane 3 -->
-          <div class="switcher__display-pane switcher__display-pane--project-3">
-            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
-            <div class="switcher__info">
-              <div class="switcher__icons">
-                <span class="switcher__tech">Technologies:</span>
-                <svg class="switcher__icon">
-                  <use xlink:href="#javascript"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#html5"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#css32"></use>
-                </svg>
-              </div>
-              <div class="switcher__learn-more">
-                <a href="#" class="btn-text">learn more
-                  <span>&rarr;</span>
-                </a>
+
+          <!-- accordion label calculator -->
+          <label for="acc-project-3" class="switcher__accordion-label">store
+            <svg class="switcher__accordion-icon">
+              <use xlink:href="#chevron-down"></use>
+            </svg>
+          </label>
+          <!-- accordion wrapper -->
+          <div class="switcher__accordion-wrapper">
+            <!-- content for pane -->
+            <div class="switcher__display-pane switcher__display-pane--project-3">
+              <img class="switcher__image switcher__image--square" src="${require('./images/shop.jpg')}" srcset="${require('./images/shop.jpg').srcSet}"
+                alt="image">
+              <div class="switcher__info switcher__info--3">
+                <div class="switcher__icons">
+                  <span class="switcher__tech">Technologies:</span>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#javascript"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#html5"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#css32"></use>
+                  </svg>
+                </div>
+                <div class="switcher__learn-more">
+                  <a href="#" class="btn-text">learn more
+                    <span>&rarr;</span>
+                  </a>
+                </div>
               </div>
             </div>
-
-
-
-
           </div>
+
           <!-- pane 4 -->
-          <div class="switcher__display-pane switcher__display-pane--project-4">
-            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
-            <div class="switcher__info">
-              <div class="switcher__icons">
-                <span class="switcher__tech">Technologies:</span>
-                <svg class="switcher__icon">
-                  <use xlink:href="#javascript"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#html5"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#css32"></use>
-                </svg>
-              </div>
-              <div class="switcher__learn-more">
-                <a href="#" class="btn-text">learn more
-                  <span>&rarr;</span>
-                </a>
+          <!-- accordion label calculator -->
+          <label for="acc-project-4" class="switcher__accordion-label">image gallery
+            <svg class="switcher__accordion-icon">
+              <use xlink:href="#chevron-down"></use>
+            </svg>
+          </label>
+          <!-- accordion wrapper -->
+          <div class="switcher__accordion-wrapper">
+            <!-- content for pane -->
+            <div class="switcher__display-pane switcher__display-pane--project-4">
+              <img class="switcher__image" src="${require('./images/gallery.jpg')}" srcset="${require('./images/gallery.jpg').srcSet}"
+                alt="image">
+              <div class="switcher__info switcher__info--4">
+                <div class="switcher__icons">
+                  <span class="switcher__tech">Technologies:</span>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#javascript"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#html5"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#css32"></use>
+                  </svg>
+                </div>
+                <div class="switcher__learn-more">
+                  <a href="#" class="btn-text">learn more
+                    <span>&rarr;</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
           <!-- pane 5  -->
-          <div class="switcher__display-pane switcher__display-pane--project-5">
-            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
-            <div class="switcher__info">
-              <div class="switcher__icons">
-                <span class="switcher__tech">Technologies:</span>
-                <svg class="switcher__icon">
-                  <use xlink:href="#javascript"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#html5"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#css32"></use>
-                </svg>
-              </div>
-              <div class="switcher__learn-more">
-                <a href="#" class="btn-text">learn more
-                  <span>&rarr;</span>
-                </a>
+          <!-- accordion label calculator -->
+          <label for="acc-project-5" class="switcher__accordion-label">tabs
+            <svg class="switcher__accordion-icon">
+              <use xlink:href="#chevron-down"></use>
+            </svg>
+          </label>
+          <!-- accordion wrapper -->
+          <div class="switcher__accordion-wrapper">
+            <!-- content for pane -->
+            <div class="switcher__display-pane switcher__display-pane--project-5">
+              <img class="switcher__image" src="images/nat-1.jpg" alt="image">
+              <div class="switcher__info switcher__info--5">
+                <div class="switcher__icons">
+                  <span class="switcher__tech">Technologies:</span>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#javascript"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#html5"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#css32"></use>
+                  </svg>
+                </div>
+                <div class="switcher__learn-more">
+                  <a href="#" class="btn-text">learn more
+                    <span>&rarr;</span>
+                  </a>
+                </div>
               </div>
             </div>
-
-
-
-
           </div>
 
           <!-- pane 6 -->
-          <div class="switcher__display-pane switcher__display-pane--project-6">
-            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
-            <div class="switcher__info">
-              <div class="switcher__icons">
-                <span class="switcher__tech">Technologies:</span>
-                <svg class="switcher__icon">
-                  <use xlink:href="#javascript"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#html5"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#css32"></use>
-                </svg>
-              </div>
-              <div class="switcher__learn-more">
-                <a href="#" class="btn-text">learn more
-                  <span>&rarr;</span>
-                </a>
+          <!-- accordion label calculator -->
+          <label for="acc-project-6" class="switcher__accordion-label">tic-tak-toe
+            <svg class="switcher__accordion-icon">
+              <use xlink:href="#chevron-down"></use>
+            </svg>
+          </label>
+          <!-- accordion wrapper -->
+          <div class="switcher__accordion-wrapper">
+            <!-- content for pane -->
+            <div class="switcher__display-pane switcher__display-pane--project-6">
+              <img class="switcher__image switcher__image--square" src="${require('./images/ticktactoe.jpg')}" srcset="${require('./images/ticktactoe.jpg').srcSet}"
+                alt="image">
+              <div class="switcher__info switcher__info--6">
+                <div class="switcher__icons">
+                  <span class="switcher__tech">Technologies:</span>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#javascript"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#html5"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#css32"></use>
+                  </svg>
+                </div>
+                <div class="switcher__learn-more">
+                  <a href="#" class="btn-text">learn more
+                    <span>&rarr;</span>
+                  </a>
+                </div>
               </div>
             </div>
-
-
-
-
           </div>
 
           <!-- pane 7 -->
-          <div class="switcher__display-pane switcher__display-pane--project-7">
-            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
-            <div class="switcher__info">
-              <div class="switcher__icons">
-                <span class="switcher__tech">Technologies:</span>
-                <svg class="switcher__icon">
-                  <use xlink:href="#javascript"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#html5"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#css32"></use>
-                </svg>
-              </div>
-              <div class="switcher__learn-more">
-                <a href="#" class="btn-text">learn more
-                  <span>&rarr;</span>
-                </a>
+          <!-- accordion label calculator -->
+          <label for="acc-project-7" class="switcher__accordion-label">accordion
+            <svg class="switcher__accordion-icon">
+              <use xlink:href="#chevron-down"></use>
+            </svg>
+          </label>
+          <!-- accordion wrapper -->
+          <div class="switcher__accordion-wrapper">
+            <!-- content for pane -->
+            <div class="switcher__display-pane switcher__display-pane--project-7">
+              <img class="switcher__image" src="images/nat-1.jpg" alt="image">
+              <div class="switcher__info switcher__info--7">
+                <div class="switcher__icons">
+                  <span class="switcher__tech">Technologies:</span>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#javascript"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#html5"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#css32"></use>
+                  </svg>
+                </div>
+                <div class="switcher__learn-more">
+                  <a href="#" class="btn-text">learn more
+                    <span>&rarr;</span>
+                  </a>
+                </div>
               </div>
             </div>
-
-
-
-
           </div>
 
           <!-- pane 8 -->
-          <div class="switcher__display-pane switcher__display-pane--project-8">
-            <img class="switcher__image" src="images/nat-1.jpg" alt="image">
-            <div class="switcher__info">
-              <div class="switcher__icons">
-                <span class="switcher__tech">Technologies:</span>
-                <svg class="switcher__icon">
-                  <use xlink:href="#javascript"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#html5"></use>
-                </svg>
-                <svg class="switcher__icon">
-                  <use xlink:href="#css32"></use>
-                </svg>
-              </div>
-              <div class="switcher__learn-more">
-                <a href="#" class="btn-text">learn more
-                  <span>&rarr;</span>
-                </a>
+          <!-- accordion label calculator -->
+          <label for="acc-project-8" class="switcher__accordion-label">business card
+            <svg class="switcher__accordion-icon">
+              <use xlink:href="#chevron-down"></use>
+            </svg>
+          </label>
+          <!-- accordion wrapper -->
+          <div class="switcher__accordion-wrapper">
+            <!-- content for pane -->
+            <div class="switcher__display-pane switcher__display-pane--project-8">
+              <img class="switcher__image" src="${require('./images/card.jpg')}" srcset="${require('./images/card.jpg').srcSet}" alt="image">
+              <div class="switcher__info switcher__info--8">
+                <div class="switcher__icons">
+                  <span class="switcher__tech">Technologies:</span>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#javascript"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#html5"></use>
+                  </svg>
+                  <svg class="switcher__icon">
+                    <use xlink:href="#css32"></use>
+                  </svg>
+                </div>
+                <div class="switcher__learn-more">
+                  <a href="#" class="btn-text">learn more
+                    <span>&rarr;</span>
+                  </a>
+                </div>
               </div>
             </div>
-
-
-
-
           </div>
 
 
@@ -305,10 +377,12 @@
 
       </div>
       <!-- end switcher component -->
+
+      <a class="btn" href='../another/index.html'>more projects</a>
     </section>
 
     <!-- skills -->
-    <section class="skills">
+    <section class="skills" id="skillsLink">
 
       <h2 class="heading__sub">skills</h2>
 
@@ -435,7 +509,7 @@
 
 
 
-    <section class="contact">
+    <section class="contact" id="contactLink">
       <h2 class="heading__sub">Contact</h2>
       <div class="contact__container">
         <div class="card">
@@ -503,7 +577,7 @@
 
   <footer class="footer">
     <div class="footer__form-group">
-      <p class="footer__content">&copy; 2018 - Oscar Rodriguez</p>
+      <p class="footer__content">&copy; ${new Date().getFullYear()} - Oscar Rodriguez</p>
       <p class="footer__love-text">Made with</p>
       <svg class="footer__heart">
         <use xlink:href="#heart"></use>
