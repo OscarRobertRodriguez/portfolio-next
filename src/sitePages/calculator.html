@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>calculator</title>
+</head>
+
+<body>
+  <h1 class="heading__main">Calculator</h1>
+
+  <main class='main'>
+
+  <section class="component__container">
+    <section class="phone">
+      <div class="phone-frame">
+        <div class="phone__camera-lens"></div>
+        <div class="phone__power-btn"></div>
+        <div class="phone__volume-btn"></div>
+        <div class="phone__speaker-top"></div>
+        <div class="phone__speaker-bottom"></div>
+        <div class="phone__display">
+          <div class="phone__input-section">
+            <input class="phone__input" disabled='disabled'>
+            <input class="phone__result" disabled="disabled">
+          </div>
+
+          <div class="phone__buttons-container">
+            <div class="phone__buttons-left">
+              <div>
+                <button class="phone__btn phone__btn--dark" value='7'>7</button>
+                <button class="phone__btn phone__btn--dark" value='8'>8</button>
+                <button class="phone__btn phone__btn--dark" value='9'>9</button>
+              </div>
+              <div>
+                <button class="phone__btn phone__btn--dark" value='4'>4</button>
+                <button class="phone__btn phone__btn--dark" value='5'>5</button>
+                <button class="phone__btn phone__btn--dark" value='6'>6</button>
+              </div>
+              <div>
+                <button class="phone__btn phone__btn--dark" value='1'>1</button>
+                <button class="phone__btn phone__btn--dark" value='2'>2</button>
+                <button class="phone__btn phone__btn--dark" value='3'>3</button>
+              </div>
+              <div>
+                <button class="phone__btn phone__btn--dark" value='.'>.</button>
+                <button class="phone__btn phone__btn--dark" value='0'>0</button>
+                <button class="phone__btn phone__btn--dark" value='='>&#61;</button>
+              </div>
+            </div>
+            <div class="phone__buttons-right">
+              <button class="phone__btn phone__btn--light" id='delBtn' value='DEL'>DEL</button>
+              <button class="phone__btn phone__btn--light" value='÷'>&#xf7;</button>
+              <button class="phone__btn phone__btn--light" value='×'>&#xd7;</button>
+              <button class="phone__btn phone__btn--light" value='−'>&minus;</button>
+              <button class="phone__btn phone__btn--light" value='+'>&#43;</button>
+            </div>
+            <article class="phone__history-slide" id="history">
+              <div class='phone__arrow-left'></div>
+              <div class="phone__history-list">
+                <div>
+                <h3 class='phone__history-title'>Notes</h3>
+                <p>holding and releasing the delete btn will clear the screen</p>
+                </div>
+                <div>
+                <h3 class='phone__history-title'>Author</h3>
+                <p>Oscar Rodriguez</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  </section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="footer__form-group">
+    <p class="footer__content">&copy; ${new Date().getFullYear()} - Oscar Rodriguez</p>
+    <p class="footer__love-text">Made with</p>
+    <svg class="footer__heart">
+      <use xlink:href="#heart"></use>
+    </svg>
+  </div>
+</footer>
+
+
+</body>
+
+</html>

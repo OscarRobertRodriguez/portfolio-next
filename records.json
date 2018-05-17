@@ -42,7 +42,7 @@
         "byName": {},
         "bySource": {},
         "usedIds": [
-          1
+          0
         ]
       }
     }
@@ -578,7 +578,69 @@
         "byName": {},
         "bySource": {},
         "usedIds": [
-          1
+          0
+        ]
+      }
+    }
+  ],
+  "html-webpack-plugin for \"home/home.html\"": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/nat-1.jpg": 0,
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/card.jpg": 1,
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/ticktactoe.jpg": 2,
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/gallery.jpg": 3,
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/shop.jpg": 4,
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/puzzle.jpg": 5,
+          "node_modules/html-webpack-plugin/lib/loader.js!node_modules/html-loader/index.js??ref--4-0!src/index.html": 6
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3,
+          "4": 4,
+          "5": 5,
+          "6": 6
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "html-webpack-plugin for \"home.html\"": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/nat-1.jpg": 0,
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/card.jpg": 1,
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/ticktactoe.jpg": 2,
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/gallery.jpg": 3,
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/shop.jpg": 4,
+          "node_modules/responsive-loader/lib/index.js??ref--5!node_modules/url-loader/dist/cjs.js??ref--10!src/images/puzzle.jpg": 5,
+          "node_modules/html-webpack-plugin/lib/loader.js!node_modules/html-loader/index.js??ref--4-0!src/index.html": 6
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3,
+          "4": 4,
+          "5": 5,
+          "6": 6
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "bySource": {},
+        "usedIds": [
+          0
         ]
       }
     }
