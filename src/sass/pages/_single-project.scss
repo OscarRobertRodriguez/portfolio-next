@@ -1,0 +1,9 @@
+
+
+.component__container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem;
+  @include flex-center;
+}

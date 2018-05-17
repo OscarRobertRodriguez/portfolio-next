@@ -16,6 +16,7 @@
 @import 'components/card';
 @import 'components/graph';
 @import 'components/project-switcher';
+@import 'components/calculator';
 
 /* layout */
 
@@ -25,6 +26,7 @@
 /* pages */
 @import 'pages/home';
 @import 'pages/projects';
+@import 'pages/single-project';
 
 
 

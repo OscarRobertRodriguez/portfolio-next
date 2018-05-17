@@ -1,0 +1,303 @@
+
+
+.phone {
+    border-radius: 25px;
+    width: 371px;
+    height: 671px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 1px;
+    border: 4px solid black;
+    box-shadow: 1px 15px 1px;
+    max-width: 100%;
+    background: #151313;
+    box-shadow: -2px 5px 25px rgba(0, 0, 0, .7);
+
+    &-frame {
+        position: relative;
+        border-radius: 5%;
+        background: black;
+        height: 657px;
+        width: 99%;
+        display: flex;
+        justify-content: center;
+        box-shadow: 1px 2px 1px;
+        align-items: center;
+
+    }
+
+
+    &__display {
+        display: grid;
+        width: 95%;
+        height: 550px;
+        border: 1px solid black;
+        grid-template-areas: 'screen' 'buttons';
+        grid-template-rows: 190px 3fr;
+        grid-template-columns: 100%;
+    }
+
+    &__input-section {
+        grid-area: screen;
+        text-align: right;
+        font-size: 4rem;
+        position: relative;
+        background: #fff;
+    }
+
+    &__input {
+        color: #000;
+        caret-color: #00944c;
+        border: none;
+        font-size: 4rem;
+        width: 95%;
+        margin-top: 25px;
+        text-align: right;
+        padding-right: 9px;
+        font-weight: 200;
+        overflow: scroll;
+        background: #fff;
+    }
+
+    &__result {
+        text-align: right;
+        background: transparent;
+        border: none;
+        color: #636363;
+        padding-bottom: 5px;
+        padding-right: 5px;
+        width: 80%;
+        height: 60px;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+
+    &__buttons-container {
+        position: relative;
+        display: grid;
+        grid-area: buttons;
+        grid-template-columns: 3fr 1fr 20px;
+        grid-template-areas: 'left right history';
+    }
+
+    &__buttons-left {
+        display: grid;
+        grid-area: left;
+        grid-template-areas: 'top' 'topBottom' 'bottomTop' 'bottom';
+        grid-template-rows: repeat(4, minmax(80px, 1fr));
+    }
+
+
+    &__buttons-left>div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    &__buttons-left>div:nth-child(1) {
+      grid-area: top;
+    }
+
+    &__buttons-left>div:nth-child(2) {
+      grid-area: topBottom;
+    }
+
+    &__buttons-left>div:nth-child(3) {
+      grid-area: bottomTop;
+    }
+
+    &__buttons-left>div:nth-child(4) {
+      grid-area: bottom;
+    }
+
+    &__buttons-right {
+      display: grid;
+      grid-area: right;
+    }
+
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        cursor: pointer;
+        transition: opacity .1ms ease-out;
+        border: none;
+        outline: none;
+        border-radius: 0;
+        transition: all .2s ease;
+
+        &:hover {
+          opacity: .9;
+        }
+        &:active {
+          box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+        }
+    }
+
+    &__btn--dark {
+        font-size: 2rem;
+        background: #434343;
+    }
+
+    &__btn--light {
+        background: #636363;
+        text-transform: capitalize;
+    }
+
+
+
+    &__history-slide {
+        position: relative;
+        grid-area: history;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 20px;
+        cursor: pointer;
+        z-index: 1000;
+        background: #1DE9B6;
+        transition: width 0.3s ease;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &__arrow-left {
+        position: absolute;
+        z-index: 2000;
+        top: 50%;
+        left: 7px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid black;
+        transition: .5s ease;
+    }
+
+    &__history-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 0 .5rem 0 30px;
+      height: 100%;
+      text-align: center;
+    }
+
+    // &__history-title {
+    //    text-align: center;
+    // }
+
+
+    // phone style assets to make look like a phone ex. camera
+
+    &__camera-lens {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 15px;
+      left: 15px;
+      border-radius: 50px;
+      background: #5F5E5F;
+      opacity: .7;
+      z-index: 100;
+      &:before {
+        position: absolute;
+        top: 5px;
+        left: 4px;
+        content: '';
+        background: #fff;
+        opacity: .1;
+        border-bottom: 5px solid transparent;
+        width: 8px;
+        height: 8px;
+        border-radius: 50px;
+      }
+
+      &:after {
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        content: '';
+        background: blue;
+        opacity: .5;
+        border-bottom: 5px solid transparent;
+        width: 8px;
+        height: 8px;
+        border-radius: 50px;
+      }
+    }
+
+    &__power-btn,
+    &__volume-btn {
+        z-index: 100;
+        position: absolute;
+        right: -11px;
+        width: 100px;
+        background: black;
+        border-radius: 20px;
+        width: 4px;
+    }
+
+    &__power-btn {
+        top: 140px;
+        height: 50px;
+    }
+
+    &__volume-btn {
+      height: 100px;
+      top: 220px;
+    }
+
+    &__speaker-top,
+    &__speaker-bottom {
+        width: 50%;
+        height: 8px;
+        border-radius: 50px;
+        position: absolute;
+        box-shadow: inset 1px 1px 2px 0 grey;
+        background-color: rgb(32, 32, 32);
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)),
+        linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+        linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+        linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+        background-size: 100% 100%,
+        5px 10px,
+        5px 10px,
+        10px 5px;
+        background-position: 0px 0px,
+        0px 0px,
+        5px 5px,
+        0px 0px;
+    }
+
+    &__speaker-top {
+        top: 10px;
+    }
+
+    &__speaker-bottom {
+       bottom: 15px;
+    }
+
+
+}
+
+
+.history-expand {
+  width: 300px;
+}
+
+.arrow-twist {
+  transform: rotate(180deg);
+  width: 3px;
+}
+
