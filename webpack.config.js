@@ -41,7 +41,7 @@ const productionConfig = merge([
   {
     output: {
       path: PATHS.build,
-      publicPath: '../',
+      publicPath: './',
       chunkFilename: '[name].[chunkhash:4].js',
       filename: '[name].[chunkhash:4].js',
     },
@@ -119,18 +119,23 @@ const developmentConfig = merge([
 module.exports = mode => {
   const pages = [
     parts.page({
-      path: 'home',
-      title: 'Webpack demo ',
+      title: 'index',
       entry: { app: PATHS.app },
       template: './src/index.html',
     }),
     parts.page({
-      path: 'another',
-      title: 'more projects',
+      title: 'moreProjects',
       entry: {
         app: PATHS.app,
       },
       template: './src/sitePages/moreProjects.html',
+    }),
+    parts.page({
+      title: 'calculator',
+      entry: {
+        calculator: path.join(PATHS.app, 'projects/calculator.js'),
+      },
+      template: './src/sitePages/calculator.html',
     }),
   ];
   const config = mode === 'production' ? productionConfig : developmentConfig;

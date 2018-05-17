@@ -19,7 +19,7 @@ exports.devServer = ({ host, port } = {}) => ({
 exports.extractCSS = ({ include, exclude, use }) => {
   const plugin = new ExtractTextPlugin({
     allChunks: true,
-    filename: 'css/[name].[md5:contenthash:hex:20].css',
+    filename: '[name].[md5:contenthash:hex:20].css',
   });
   return {
     module: {
@@ -239,7 +239,6 @@ exports.minifyCSS = ({ options }) => ({
 });
 
 exports.page = ({
-  path = '',
   template = require.resolve('html-webpack-plugin/default_index.ejs'),
   title,
   entry,
@@ -247,7 +246,7 @@ exports.page = ({
   entry,
   plugins: [
     new HtmlWebpackPlugin({
-      filename: `${path && path + '/'}index.html`,
+      filename: `${title}.html`,
       template,
       title,
     }),
